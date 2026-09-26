@@ -1,0 +1,13 @@
+FK_CustomerCustomerDemo|CustomerCustomerDemo.CustomerTypeID -> CustomerDemographics.CustomerTypeID
+FK_Territories_Region|Territories.RegionID -> Region.RegionID
+FK_EmployeeTerritories_Territories|EmployeeTerritories.TerritoryID -> Territories.TerritoryID
+FK_EmployeeTerritories_Employees|EmployeeTerritories.EmployeeID -> Employees.EmployeeID
+FK_Employees_Employees|Employees.ReportsTo -> Employees.EmployeeID
+FK_Orders_Employees|Orders.EmployeeID -> Employees.EmployeeID
+FK_Products_Categories|Products.CategoryID -> Categories.CategoryID
+FK_CustomerCustomerDemo_Customers|CustomerCustomerDemo.CustomerID -> Customers.CustomerID
+FK_Orders_Customers|Orders.CustomerID -> Customers.CustomerID
+FK_Orders_Shippers|Orders.ShipVia -> Shippers.ShipperID
+FK_Products_Suppliers|Products.SupplierID -> Suppliers.SupplierID
+FK_Order_Details_Orders|Order Details.OrderID -> Orders.OrderID
+FK_Order_Details_Products|Order Details.ProductID -> Products.ProductID

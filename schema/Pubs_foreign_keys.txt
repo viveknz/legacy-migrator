@@ -1,0 +1,10 @@
+FK__titleauth__au_id__31EC6D26|titleauthor.au_id -> authors.au_id
+FK__titles__pub_id__2E1BDC42|titles.pub_id -> publishers.pub_id
+FK__pub_info__pub_id__440B1D61|pub_info.pub_id -> publishers.pub_id
+FK__employee__pub_id__4BAC3F29|employee.pub_id -> publishers.pub_id
+FK__titleauth__title__32E0915F|titleauthor.title_id -> titles.title_id
+FK__sales__title_id__38996AB5|sales.title_id -> titles.title_id
+FK__roysched__title___3A81B327|roysched.title_id -> titles.title_id
+FK__sales__stor_id__37A5467C|sales.stor_id -> stores.stor_id
+FK__discounts__stor___3C69FB99|discounts.stor_id -> stores.stor_id
+FK__employee__job_id__48CFD27E|employee.job_id -> jobs.job_id
