@@ -95,6 +95,28 @@ legacy-migrator/
 SQL Server 2019 (Docker) · PostgreSQL 16 (Docker) · IBM Bob 2.0 (Bob Shell CLI) ·
 Python (pyodbc, psycopg2)
 
+## 🔑 Data & Setup
+
+**Data source:** Microsoft's own official Northwind and Pubs sample databases
+([github.com/microsoft/sql-server-samples](https://github.com/microsoft/sql-server-samples)),
+used as-is under Microsoft's public sample license. No proprietary or customer
+data anywhere in this repo.
+
+**Reproduce it:**
+1. Run SQL Server 2019 and Postgres 16 in Docker (see `migration/` for the
+   schema and connection details).
+2. Load Northwind/Pubs into the SQL Server container via `sqlcmd`
+   (bundled in the `mssql` image — no host install needed).
+3. Bob Shell CLI: create an API key at `bob.ibm.com/admin/apikeys`, set it as
+   `BOB_API_KEY`, and accept the license once with `bob run --accept-license`.
+4. Run the audit tasks, then `migration/migrate_northwind_data.py` to migrate
+   and verify.
+
+**Credentials:** no API keys, tokens, or cloud credentials are committed
+anywhere in this repo — checked before making it public. The only credentials
+present are local passwords for the throwaway Docker containers, which exist
+only on the machine running the demo.
+
 ---
 
 <p align="center"><sub>Built solo, driven hard, one Bob task at a time. 🐛🔨</sub></p>
